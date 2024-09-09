@@ -62,7 +62,7 @@ export const ChatBox = () => {
         }
         // eslint-disable-next-line
     }, [chatUser]);
-
+    console.log(messagesId, "messagaId");
     useEffect(() => {
         if (Array.isArray(messagesId) && messagesId.length > 0) {
             const unsubscribe = messagesId.map(messageId =>
@@ -104,6 +104,8 @@ export const ChatBox = () => {
             </div>
         )
     }
+
+    // console.log(messages);
     return (
         <div className="ChatBox h-[75vh] relative bg-[#f1f5ff]">
             <div className="chatUser py-[10px] px-[15px] flex items-center gap-[10px] border-b border-[#c6c6c6]">
